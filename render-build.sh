@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-# Install TypeScript & type packages before build
+set -e
+
+echo "🧩 Installing TypeScript and required types..."
 npm install --save-dev typescript @types/react @types/node
 
-# Run Next.js build
+echo "📦 Installing project dependencies..."
+npm install
+
+echo "🚀 Running Next.js build..."
 npm run build
