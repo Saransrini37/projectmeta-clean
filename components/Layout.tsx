@@ -69,7 +69,7 @@ export default function Layout({ children }: any) {
     style={{
       fontSize: "1.5rem",
       transition: "all 0.3s ease-in-out",
-      transform: theme === "dark" ? "rotate(0deg)" : "rotate(360deg)",
+      transform: theme === "dark" ? "rotate(0deg) translate(1px, -1px)" : "rotate(360deg) translate(1px, -1px)",
     }}
   >
     {theme === "dark" ? "🌙" : "☀️"}
@@ -123,8 +123,8 @@ function LogoutButton() {
 <span
   style={{
     display: "inline-block",
-    transform: hovered ? "scale(2.5)" : "scale(1)",
-    borderRadius: hovered ? "2rem" : "1.1rem",
+    transform: hovered ? "scale(2.5) translate(1px, -1px)" : "scale(1) translate(1px, -1px)",
+    borderRadius: hovered ? "2.2rem" : "1.1rem",
     transition: "all 0.4s ease-in-out",
   }}
 >

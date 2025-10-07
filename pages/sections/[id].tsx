@@ -77,7 +77,7 @@ export default function SectionPage() {
     if (clickTimeout) clearTimeout(clickTimeout);
     const timeout = setTimeout(() => {
       window.location.href = url;
-    }, 150);
+    }, 300);
     setClickTimeout(timeout);
   };
 

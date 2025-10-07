@@ -49,7 +49,7 @@ export default function Dashboard() {
     if (clickTimeout) clearTimeout(clickTimeout);
     const timeout = setTimeout(() => {
       window.location.href = "/projects/" + id;
-    }, 150);
+    }, 300);
     setClickTimeout(timeout);
   };
 

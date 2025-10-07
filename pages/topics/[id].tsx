@@ -58,7 +58,7 @@ export default function TopicPage() {
     if (clickTimeout) clearTimeout(clickTimeout);
     const timeout = setTimeout(() => {
       window.location.href = "/files/" + id;
-    }, 150); // small delay for single click
+    }, 300); // small delay for single click
     setClickTimeout(timeout);
   };
 

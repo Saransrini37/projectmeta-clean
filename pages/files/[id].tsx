@@ -63,7 +63,7 @@ export default function FilePage() {
     const timeout = setTimeout(() => {
       // single click – open (refresh or focus)
       router.push("/files/" + id);
-    }, 150);
+    }, 300);
     setClickTimeout(timeout);
   };
 

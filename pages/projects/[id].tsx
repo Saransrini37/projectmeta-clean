@@ -74,7 +74,7 @@ export default function ProjectPage() {
     if (clickTimeout) clearTimeout(clickTimeout);
     const timeout = setTimeout(() => {
       window.location.href = url;
-    }, 150); // single click delay
+    }, 300); // single click delay
     setClickTimeout(timeout);
   };
 
