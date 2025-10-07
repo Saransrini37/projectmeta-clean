@@ -6,7 +6,7 @@ export default function Dashboard() {
   const [clickTimeout, setClickTimeout] = useState<any>(null);
 
   async function load() {
-    const res = await fetch("/api/projects");
+    const res = await fetch("https://projectmeta-clean.onrender.com/api/projects");
     if (res.ok) setProjects(await res.json());
   }
 
@@ -16,7 +16,7 @@ export default function Dashboard() {
       alert("⚠️ Please enter a project name!");
       return;
     }
-    await fetch("/api/projects", {
+    await fetch("https://projectmeta-clean.onrender.com/api/projects", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: name }),
@@ -27,7 +27,7 @@ export default function Dashboard() {
   async function renameProject(id: number, currentTitle: string) {
     const name = prompt("Rename project:", currentTitle);
     if (!name?.trim()) return;
-    await fetch("/api/projects/" + id, {
+    await fetch("https://projectmeta-clean.onrender.com/api/projects/" + id, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: name }),
@@ -37,7 +37,7 @@ export default function Dashboard() {
 
   async function deleteProject(id: number) {
     if (!confirm("Delete project?")) return;
-    await fetch("/api/projects/" + id, { method: "DELETE" });
+    await fetch("https://projectmeta-clean.onrender.com/api/projects/" + id, { method: "DELETE" });
     load();
   }
 
@@ -61,14 +61,8 @@ export default function Dashboard() {
   return (
     <Layout>
       <div className="p-6">
-        {/* Header */}
         <div className="flex gap-4 mb-4 flex-wrap items-center">
-          <h2
-            className="text-2xl font-bold mb-4"
-          >
-            Projects
-          </h2>
-
+          <h2 className="text-2xl font-bold mb-4">Projects</h2>
           <div className="mb-4">
             <button
               onClick={createProject}
@@ -79,8 +73,6 @@ export default function Dashboard() {
             </button>
           </div>
         </div>
-
-        {/* Project List */}
         <div className="flex flex-col gap-3">
           {projects.map((p) => (
             <div
