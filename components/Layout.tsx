@@ -8,6 +8,7 @@ export default function Layout({ children }: any) {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
+  const [hover, setHover] = useState(false);
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
@@ -53,6 +54,8 @@ export default function Layout({ children }: any) {
 <button
   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
   onMouseDown={(e) => e.preventDefault()} // prevent focus outline shift
+  onMouseEnter={() => setHover(true)}
+  onMouseLeave={() => setHover(false)}
   className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border"
   style={{
     backgroundColor: theme === "dark" ? "#222" : "#fff",
@@ -69,7 +72,11 @@ export default function Layout({ children }: any) {
     style={{
       fontSize: "1.5rem",
       transition: "all 0.3s ease-in-out",
-      transform: theme === "dark" ? "rotate(0deg) translate(1px, -1px)" : "rotate(360deg) translate(1px, -1px)",
+                transform: hover
+            ? "rotate(360deg) scale(1.5) translate(1px, -1px)"
+            : theme === "dark"
+            ? "rotate(0deg) translate(0.8px, -1px)"
+            : "rotate(360deg) translate(0.8px, -1px)"
     }}
   >
     {theme === "dark" ? "🌙" : "☀️"}
@@ -128,7 +135,7 @@ function LogoutButton() {
     transition: "all 0.4s ease-in-out",
   }}
 >
-  {hovered ? "⛔" : "🏃‍♂️"}
+  {hovered ? "😴" : "🏃‍♂️"}
 </span>
     </button>
   );
