@@ -20,6 +20,7 @@
   --file-clr: #FF8282;
   --tittle-clr: #1F024C;
   --save-clr: #9ED79A;
+  --del-clr:#000000;
 
 }
 
@@ -33,7 +34,7 @@
   --primary-hover: #0FA600;
   --accent: #1F1F1F;
   --danger: #E41E3F;
-  /* --shadow-color: rgba(255, 255, 255, 0.12); */
+  --shadow-color: rgba(255, 255, 255, 0.12);
   --shadow-color: #610094;
   --project-clr: #98CD00;
   --section-clr: #63C8FF;
@@ -41,6 +42,7 @@
   --file-clr: #FFDEDE;
   --tittle-clr: #E47676;
   --save-clr: #A7D46F;
+  --del-clr:#ffffff;
 }
 
 
@@ -76,9 +78,9 @@ body {
 .mete-btn-danger {
   float: right;
   padding: 0.25rem 0.5rem; /* px-2 py-1 */
-  color: white;
+  color: var(--del-clr);
   background: transparent;
-  border: 1px solid red;
+  /* border: 0px solid red; */
   border-radius: 0.4rem;
   box-shadow: 2px 2px 10px red;
   transition: all 0.3s ease;
@@ -86,8 +88,8 @@ body {
 
 .mete-btn-danger:hover {
   background: red;
-  transform: scale(1.2);
-  box-shadow: 3px 3px 12px red;
+  /* transform: scale(1.2); */
+  box-shadow: 3px 3px 15px red;
 }
 
 
