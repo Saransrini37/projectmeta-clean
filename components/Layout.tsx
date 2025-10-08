@@ -51,36 +51,36 @@ export default function Layout({ children }: any) {
           {/* Buttons */}
           <div className="flex items-center gap-10">
             {/* 🌗 Theme Toggle */}
-<button
-  onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-  onMouseDown={(e) => e.preventDefault()} // prevent focus outline shift
-  onMouseEnter={() => setHover(true)}
-  onMouseLeave={() => setHover(false)}
-  className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border"
-  style={{
-    backgroundColor: theme === "dark" ? "#222" : "#fff",
-    borderColor: theme === "dark" ? "var(--accent)" : "#ddd",
-    boxShadow: theme === "dark"
-      ? "0 0 15px rgba(255,255,255,0.7)"
-      : "0 0 15px rgba(255, 255, 0, 1)",
-    cursor: "pointer",
-    transition: "all 0.3s ease-in-out",
-  }}
-  title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
->
-  <span
-    style={{
-      fontSize: "1.5rem",
-      transition: "all 0.3s ease-in-out",
-      transform:theme === "dark"
-                ? "rotate(0deg) translate(1px, -1px)"
-                : "rotate(360deg) translate(1px, -1px)"
-    }}
-  >
-    {theme === "dark" 
-        ? "🌙" : "☀️"}
-  </span>
-</button>
+            <button
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              onMouseDown={(e) => e.preventDefault()} // prevent focus outline shift
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border"
+              style={{
+                backgroundColor: theme === "dark" ? "#222" : "#fff",
+                borderColor: theme === "dark" ? "var(--accent)" : "#ddd",
+                boxShadow: theme === "dark"
+                  ? "0 0 15px rgba(255,255,255,0.7)"
+                  : "0 0 15px rgba(255, 255, 0, 1)",
+                cursor: "pointer",
+                transition: "all 0.3s ease-in-out",
+              }}
+              title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            >
+              <span
+                style={{
+                  fontSize: "1.5rem",
+                  transition: "all 0.3s ease-in-out",
+                  transform:theme === "dark"
+                            ? "rotate(0deg) translate(1px, -1px)"
+                            : "rotate(360deg) translate(1px, -1px)"
+                }}
+              >
+                {theme === "dark" 
+                    ? "🌙" : "☀️"}
+              </span>
+            </button>
 
             {/* 🚪 Logout */}
             <LogoutButton />

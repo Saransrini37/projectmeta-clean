@@ -132,7 +132,7 @@ export default function FilePage() {
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          className="w-full min-h-[200px] md:min-h-[500px] p-3 rounded resize-y font-mono border card-shadow transition-colors duration-300"
+          className="w-full min-h-[12.5rem] md:min-h-[28.125rem] p-3 rounded resize-y font-mono border card-shadow transition-colors duration-300"
           style={{
             backgroundColor: "var(--surface-color)",
             color: "var(--text-primary)",
