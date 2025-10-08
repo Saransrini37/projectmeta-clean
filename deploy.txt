@@ -1,0 +1,14 @@
+Deploy links
+	Render:https://dashboard.render.com/web/srv-d3ieuaruibrs73cs1q70/events
+	Vercel:https://vercel.com/saravanans-projects-aca33f35/projectmeta-clean
+	Githup:https://github.com/Saransrini37/projectmeta-clean
+File modification
+	git add components/Layout.tsx pages/files/[id].tsx pages/projects/[id].tsx pages/sections/[id].tsx pages/topics/[id].tsx pages/dashboard.tsx
+		if modify components/Layout.tsx,pages/files/[id].tsx,ect,.
+		Key word: git add +(file apth)
+	git commit -m "Fixed double-click rename handling and adjusted toggle/logout button position"
+		what kind of modification Like commend
+		Key word:git commit -m+("Modification detailes double quatation must")
+	git push origin main
+		uplode the modified files. it will auto deployment ignitiate
+		key word:git push origin main
